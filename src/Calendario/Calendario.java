@@ -103,7 +103,7 @@ public class Calendario {
     }
     public boolean iguales(Calendario otraFecha){
 
-        // Comparar año, mes y día --> he buscado como hacerlo
+        // Comparar año, mes y día --> he buscado como hacerlo (hasta ahora no había escrito un return así)
         return this.año == otraFecha.año &&
                 this.mes == otraFecha.mes &&
                 this.dia == otraFecha.dia;
@@ -114,7 +114,7 @@ public class Calendario {
 //-----------------------------------------
 //Problemas a lo largo del código
 //1.Solucionnar año 0 --> OK.
-//2. Boolean iguales
+//2. Boolean iguales --> ok
 //3. Delimitar intervalo de días
 //4. Delimitar intervalo a 12 meses
 
@@ -122,5 +122,8 @@ public class Calendario {
 //1.Limites de dias,meses y años -->OK
 //2. True False -->OK
 
-//Errores:
+//Cosas a mejorar:
 //Si se empieza con año 0 no incrementa o da error --> se puede poner cualquier año que no sea 0 (positivo o negativo)
+//El bucle para introducir datos solo te da una oportunidad de equivocarte
+//Una vez has introducido el día, delimita el mes que te pide (si se usan valores 29,30,31). Una forma de soluciona esto
+//es pidiendo primero año, mes y después dia (que dependerá la entrada del mes)
