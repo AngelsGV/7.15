@@ -36,14 +36,14 @@ public class Programa {
         int d = sc.nextInt();
         //Controlar entrada de datos.
             if (m == 2 && d <= 29) {
-                calendario.setMes(m);
+                calendario.setDia(d);
             } else if ((m == 4 || m == 6 || m == 9 || m == 11) && d <= 30) {
-                calendario.setMes(m);
+                calendario.setDia(d);
             } else if ((m==1||m==3||m==5||m==7||m==8||m==12) && d <= 31) {
-                calendario.setMes(m);
+                calendario.setDia(d);
             } else {
                 System.out.println("El mes no es válido para el día que has introducido. Vuelva a introducir el mes: ");
-                m = sc.nextInt();
+                d = sc.nextInt();
             }
 
 
