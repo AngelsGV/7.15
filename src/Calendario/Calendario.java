@@ -8,7 +8,7 @@ public class Calendario {
     int añoIncrementar;
 
     //Se especifica que Calendario lleva esos atributos y se definen
-    public Calendario(int dia, int mes, int año){
+    public Calendario(){
         this.dia=dia;
         this.mes=mes;
         this.año=año;
@@ -59,7 +59,7 @@ public class Calendario {
         } else if (mes == 2 && dia < 29) {//El mes que tiene 29 dias
             dia++;
         } else if (mes==2 && dia ==29) {
-            dia =1;
+            dia = 1;
             mes++;
         } else if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia < 30) {   //Los meses que tienen 30  dias
             dia++;
