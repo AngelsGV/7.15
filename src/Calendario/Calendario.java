@@ -48,21 +48,34 @@ public class Calendario {
         this.mes = mes;
     }
     //Las funciones que me pide el ejercicio
+
     public void incrementarDia(){
         //Los meses que tienen 31 días
         if ((mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12)&& dia < 31){
             dia++;
+        } else if ((mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12)&& dia == 31) {
+            mes++;
+            dia=1;
         } else if (mes == 2 && dia < 29) {//El mes que tiene 29 dias
             dia++;
+        } else if (mes==2 && dia ==29) {
+            dia =1;
+            mes++;
         } else if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia < 30) {   //Los meses que tienen 30  dias
             dia++;
+        } else if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia == 30) {
+            dia =1;
+            mes++;
         }
     }
 
     public void incrementarMes() {
         // Los meses van del 1 al 12
-        if (mes >= 1 && mes <= 12) {
+        if (mes >= 1 && mes <= 11) {
             mes++;
+        } else if (mes==12) {
+            año ++;
+            mes = 1;
         }
     }
 
@@ -90,7 +103,7 @@ public class Calendario {
     }
     public boolean iguales(Calendario otraFecha){
 
-        // Comparar año, mes y día
+        // Comparar año, mes y día --> he buscado como hacerlo
         return this.año == otraFecha.año &&
                 this.mes == otraFecha.mes &&
                 this.dia == otraFecha.dia;
@@ -110,4 +123,4 @@ public class Calendario {
 //2. True False -->OK
 
 //Errores:
-//Si se empieza con año 0 no incrementa o da error
+//Si se empieza con año 0 no incrementa o da error --> se puede poner cualquier año que no sea 0 (positivo o negativo)
