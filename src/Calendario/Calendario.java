@@ -99,8 +99,16 @@ public class Calendario {
     public void mostrar(){
         System.out.println("La fecha introducida es: " + dia + "/" + mes +"/"+ año);
     }
+    public boolean iguales(Calendario otraFecha){
+
+        // Comparar año, mes y día
+        return this.año == otraFecha.año &&
+                this.mes == otraFecha.mes &&
+                this.dia == otraFecha.dia;
+    }
 
 }
+
 //-----------------------------------------
 //Problemas a lo largo del código
 //1.Solucionnar año 0 --> OK.

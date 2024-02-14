@@ -36,5 +36,8 @@ public class Programa {
 
         //Vemos si se ha modificado
         calendario.mostrar();
+
+        //Bolean iguales
+        calendario.iguales(4/6/9);
     }
 }
