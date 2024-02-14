@@ -94,13 +94,12 @@ public class Calendario {
             System.out.println("No existe el año 0.");
         }
     }
-
-//-----------------------------------------
-    //1.Solucionnar año 0 --> OK.
-
     public void mostrar(){
         System.out.println("La fecha introducida es: " + dia + "/" + mes +"/"+ año);
     }
 
-    }
-
+}
+//-----------------------------------------
+//Problemas a lo largo del código
+//1.Solucionnar año 0 --> OK.
+//2. Boolean iguales
