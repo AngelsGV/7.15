@@ -16,24 +16,26 @@ public class Programa {
 
         System.out.println("Escribe el año (el 0 no es válido): ");
         int a = sc.nextInt();
-        if (a!= 0){
-        calendario.setAño(a);
-        }else{
-            System.out.println("Año incorrecto. Vuelva a introducirlo: ");
-            a = sc.nextInt();
-            calendario.setAño(a);
-        }
+        do{
+            if (a!= 0){
+                calendario.setAño(a);
+            }else{
+                System.out.println("Año incorrecto. Vuelva a introducirlo: ");
+                a = sc.nextInt();
+                calendario.setAño(a);
+            }
+        }while (a==0);
 
         System.out.println("Escriba el mes: ");
         int m = sc.nextInt();
-        if (m > 0 && m <= 12) {
+        do{ if (m > 0 && m <= 12) {
             calendario.setMes(m);
-        } else{
+        } else {
             System.out.println("El mes no es válido. Vuelve a introucirlo: ");
-            m=sc.nextInt();
+            m = sc.nextInt();
             calendario.setMes(m);
-
         }
+        }while(m <= 0 || m > 12);
         System.out.println("Escribe el dia: ");
         int d = sc.nextInt();
         //Controlar entrada de datos.
