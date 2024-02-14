@@ -95,7 +95,8 @@ public class Calendario {
         }
     }
 
-
+//-----------------------------------------
+    //1.Solucionnar año 0 --> OK.
 
     public void mostrar(){
         System.out.println("La fecha introducida es: " + dia + "/" + mes +"/"+ año);
