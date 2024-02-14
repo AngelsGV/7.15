@@ -115,8 +115,8 @@ public class Calendario {
 //Problemas a lo largo del código
 //1.Solucionnar año 0 --> OK.
 //2. Boolean iguales --> ok
-//3. Delimitar intervalo de días
-//4. Delimitar intervalo a 12 meses
+//3. Delimitar intervalo de días -->oki
+//4. Delimitar intervalo a 12 meses --> oki
 
 //Pruebas:
 //1.Limites de dias,meses y años -->OK
@@ -124,6 +124,6 @@ public class Calendario {
 
 //Cosas a mejorar:
 //Si se empieza con año 0 no incrementa o da error --> se puede poner cualquier año que no sea 0 (positivo o negativo)
-//El bucle para introducir datos solo te da una oportunidad de equivocarte
+//El bucle para introducir datos solo te da una oportunidad de equivocarte -->solucionado!
 //Una vez has introducido el día, delimita el mes que te pide (si se usan valores 29,30,31). Una forma de soluciona esto
-//es pidiendo primero año, mes y después dia (que dependerá la entrada del mes)
+//es pidiendo primero año, mes y después dia (que dependerá la entrada del mes) -->oki
