@@ -104,3 +104,6 @@ public class Calendario {
 //2. Boolean iguales
 //3. Delimitar intervalo de días
 //4. Delimitar intervalo a 12 meses
+//Pruebas:
+//1.Limites de dias,meses y años -->OK
+//2. True False -->OK
