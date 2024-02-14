@@ -5,6 +5,8 @@ public class Calendario {
     int año;
     int mes;
     int dia;
+    int añoIncrementar;
+
     //Se especifica que Calendario lleva esos atributos y se definen
     public Calendario(){
         this.dia=dia;
@@ -13,6 +15,15 @@ public class Calendario {
 
     }
     //gets y sets puestos todos para luego hacer comprobaciones con ellos
+
+    public int getAñoIncrementar() {
+        return añoIncrementar;
+    }
+
+    public void setAñoIncrementar(int añoIncrementar) {
+        this.añoIncrementar = añoIncrementar;
+    }
+
     public int getAño() {
         return año;
     }
@@ -65,7 +76,20 @@ public class Calendario {
 
     }
     public void incrementarAño(){//No cojemos años bisiestos
-
+    if(año!=0){
+        int añoNuevo = año + añoIncrementar;
+        if (año<0 && añoNuevo ==0){
+            añoNuevo =1;
+            año=añoNuevo;
+        }else {
+         if(año<0 && añoNuevo>0){
+             añoNuevo +=1;
+             año=añoNuevo;
+         }
+         }
+    }else {
+        System.out.println("No existe el año 0.");
+    }
 
     }
     public void mostrar(){

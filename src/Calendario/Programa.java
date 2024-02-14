@@ -27,5 +27,12 @@ public class Programa {
         //Mostramos la fecha para ver que está correcta
         calendario.mostrar();
 
+        //Incrementar año
+        System.out.println("Escribe cuantos años quieres incrementar: ");
+        int aI = sc.nextInt();
+        calendario.setAñoIncrementar(aI);
+
+        //Vemos si se ha modificado
+        calendario.mostrar();
     }
 }
