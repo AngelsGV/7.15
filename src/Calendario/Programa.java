@@ -38,6 +38,15 @@ public class Programa {
         calendario.mostrar();
 
         //Bolean iguales
-        calendario.iguales(4/6/9);
+        // Creamos un nuevo objeto Calendario con la fecha específica
+        Calendario otraFecha = new Calendario();
+        otraFecha.setAño(2024);
+        otraFecha.setMes(2);
+        otraFecha.setDia(14);
+
+        // Utilizamos el método iguales y mostramos el resultado
+        boolean sonIguales = calendario.iguales(otraFecha);
+        otraFecha.mostrar();
+        System.out.println("¿Son iguales? " + sonIguales);
     }
 }

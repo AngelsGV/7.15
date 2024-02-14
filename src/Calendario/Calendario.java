@@ -61,19 +61,26 @@ public class Calendario {
         while (mes==2){
             if(dia>0&&dia<=29){
                 dia++;
-            }
+            }else{
+            System.out.println("No existe ese día.");
+        }
         }
         //Los meses que tienen 30  dias
         while (mes==4||mes==6||mes==9||mes==11){
             if(dia>0&&dia<=30){
                 dia++;
-            }
+            }else{
+            System.out.println("No existe ese día.");
+        }
         }
 
     }
     public void incrementarMes(){
-        while (mes>=1&&mes<=12){
+        if(mes>=1&&mes<=12){
             mes++;
+        }else {
+            mes = 1;
+            incrementarAño();
         }
 
     }
