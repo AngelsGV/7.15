@@ -41,9 +41,10 @@ public class Programa {
                 calendario.setMes(m);
             } else if ((m==1||m==3||m==5||m==7||m==8||m==12) && d <= 31) {
                 calendario.setMes(m);
-            } else{
+            } else {
                 System.out.println("El mes no es válido para el día que has introducido. Vuelva a introducir el mes: ");
-                m=sc.nextInt();
+                m = sc.nextInt();
+            }
 
 
         //Mostramos la fecha para ver que está correcta
