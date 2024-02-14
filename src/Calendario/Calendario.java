@@ -53,6 +53,8 @@ public class Calendario {
         while (mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12){
             if(dia>0&&dia<=31){
                 dia++;
+            }else{
+                System.out.println("No existe ese día.");
             }
         }
         //El mes que tiene 29 dias
@@ -103,3 +105,5 @@ public class Calendario {
 //Problemas a lo largo del código
 //1.Solucionnar año 0 --> OK.
 //2. Boolean iguales
+//3. Delimitar intervalo de días
+//4. Delimitar intervalo a 12 meses
