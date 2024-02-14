@@ -21,6 +21,7 @@ public class Programa {
         }else{
             System.out.println("Año incorrecto. Vuelva a introducirlo: ");
             a = sc.nextInt();
+            calendario.setAño(a);
         }
 
         System.out.println("Escriba el mes: ");
@@ -30,6 +31,7 @@ public class Programa {
         } else{
             System.out.println("El mes no es válido. Vuelve a introucirlo: ");
             m=sc.nextInt();
+            calendario.setMes(m);
 
         }
         System.out.println("Escribe el dia: ");
@@ -42,8 +44,9 @@ public class Programa {
             } else if ((m==1||m==3||m==5||m==7||m==8||m==12) && d <= 31) {
                 calendario.setDia(d);
             } else {
-                System.out.println("El mes no es válido para el día que has introducido. Vuelva a introducir el mes: ");
+                System.out.println("El dia no es válido para el día que has introducido. Vuelva a introducirlo: ");
                 d = sc.nextInt();
+                calendario.setDia(d);
             }
 
 
