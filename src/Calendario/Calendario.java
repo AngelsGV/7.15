@@ -8,7 +8,7 @@ public class Calendario {
     int añoIncrementar;
 
     //Se especifica que Calendario lleva esos atributos y se definen
-    public Calendario(){
+    public Calendario(int dia, int mes, int año){
         this.dia=dia;
         this.mes=mes;
         this.año=año;
@@ -50,33 +50,21 @@ public class Calendario {
     //Las funciones que me pide el ejercicio
     public void incrementarDia(){
         //Los meses que tienen 31 días
-        while (mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12){
-            if(dia>0&&dia<=31){
-                dia++;
+        if ((mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12)&& dia < 31){
+            dia++;
+        } else if (mes == 2 && dia < 29) {//El mes que tiene 29 dias
+            dia++;
+        } else if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia < 30) {   //Los meses que tienen 30  dias
+            dia++;
         }
-        //El mes que tiene 29 dias
-        while (mes==2){
-            if(dia>0&&dia<=29) {
-                dia++;
-            }
-        }
-        //Los meses que tienen 30  dias
-        while (mes==4||mes==6||mes==9||mes==11){
-            if(dia>0&&dia<=30){
-                dia++;
-            }
-        }
-        }
-
     }
-    public void incrementarMes(){
-        if(mes>=1&&mes<=12){
+
+    public void incrementarMes() {
+        // Los meses van del 1 al 12
+        if (mes >= 1 && mes <= 12) {
             mes++;
-        }else {
-            mes = 1;
-            incrementarAño();
         }
-        }
+    }
 
     public void incrementarAño() { // No cojemos años bisiestos
 
@@ -107,10 +95,8 @@ public class Calendario {
                 this.mes == otraFecha.mes &&
                 this.dia == otraFecha.dia;
     }
-    }
 
-
-
+}
 
 //-----------------------------------------
 //Problemas a lo largo del código

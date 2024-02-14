@@ -9,7 +9,7 @@ public class Programa {
         Scanner sc = new Scanner(System.in);
 
         //Creamos objeto calendario
-        Calendario calendario = new Calendario();
+        Calendario calendario = new Calendario(1,1,1);
 
         //Se pide por progama valores y con el set se introducen en el objeto calendario
         System.out.println("Escribe el dia: ");
@@ -43,10 +43,8 @@ public class Programa {
         // Creamos un nuevo objeto Calendario con la fecha específica.
         // También podríamos coger este dato de los incrementos anteriores o pedirlo por pantalla.
         //He querido hacerlo así para probar también esta forma de introducir los datos.
-        Calendario otraFecha = new Calendario();
-        otraFecha.setAño(2024);
-        otraFecha.setMes(2);
-        otraFecha.setDia(14);
+        Calendario otraFecha = new Calendario(14,2,2024);
+
 
         // Utilizamos el método iguales y mostramos el resultado
         boolean sonIguales = calendario.iguales(otraFecha);
