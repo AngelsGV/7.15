@@ -27,7 +27,9 @@ public class Programa {
         //Mostramos la fecha para ver que está correcta
         calendario.mostrar();
 
-        //Incrementar año
+        //Incrementar
+        calendario.incrementarDia();
+        calendario.incrementarMes();
         System.out.println("Escribe cuantos años quieres incrementar: ");
         int aI = sc.nextInt();
         calendario.setAñoIncrementar(aI);
@@ -38,7 +40,9 @@ public class Programa {
         calendario.mostrar();
 
         //Bolean iguales
-        // Creamos un nuevo objeto Calendario con la fecha específica
+        // Creamos un nuevo objeto Calendario con la fecha específica.
+        // También podríamos coger este dato de los incrementos anteriores o pedirlo por pantalla.
+        //He querido hacerlo así para probar también esta forma de introducir los datos.
         Calendario otraFecha = new Calendario();
         otraFecha.setAño(2024);
         otraFecha.setMes(2);
@@ -46,7 +50,9 @@ public class Programa {
 
         // Utilizamos el método iguales y mostramos el resultado
         boolean sonIguales = calendario.iguales(otraFecha);
+        //Mostramos otra fecha
         otraFecha.mostrar();
-        System.out.println("¿Son iguales? " + sonIguales);
+        //Miramos si funciona el metodo iguales
+        System.out.println("¿Son iguales? :" + sonIguales);
     }
 }

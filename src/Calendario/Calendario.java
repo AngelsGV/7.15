@@ -53,24 +53,18 @@ public class Calendario {
         while (mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12){
             if(dia>0&&dia<=31){
                 dia++;
-            }else{
-                System.out.println("No existe ese día.");
-            }
         }
         //El mes que tiene 29 dias
         while (mes==2){
-            if(dia>0&&dia<=29){
+            if(dia>0&&dia<=29) {
                 dia++;
-            }else{
-            System.out.println("No existe ese día.");
-        }
+            }
         }
         //Los meses que tienen 30  dias
         while (mes==4||mes==6||mes==9||mes==11){
             if(dia>0&&dia<=30){
                 dia++;
-            }else{
-            System.out.println("No existe ese día.");
+            }
         }
         }
 
@@ -82,8 +76,8 @@ public class Calendario {
             mes = 1;
             incrementarAño();
         }
+        }
 
-    }
     public void incrementarAño() { // No cojemos años bisiestos
 
         if (año != 0) {
@@ -113,8 +107,10 @@ public class Calendario {
                 this.mes == otraFecha.mes &&
                 this.dia == otraFecha.dia;
     }
+    }
 
-}
+
+
 
 //-----------------------------------------
 //Problemas a lo largo del código
