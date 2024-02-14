@@ -14,7 +14,7 @@ public class Calendario {
         this.año=año;
 
     }
-    //gets y sets puestos todos para luego hacer comprobaciones con ellos
+    //gets y sets puestos todos para luego hacer comprobaciones con ellos (o no)
 
     public int getAñoIncrementar() {
         return añoIncrementar;
@@ -104,6 +104,10 @@ public class Calendario {
 //2. Boolean iguales
 //3. Delimitar intervalo de días
 //4. Delimitar intervalo a 12 meses
+
 //Pruebas:
 //1.Limites de dias,meses y años -->OK
 //2. True False -->OK
+
+//Errores:
+//Si se empieza con año 0 no incrementa o da error
