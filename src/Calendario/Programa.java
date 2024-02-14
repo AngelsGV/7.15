@@ -32,6 +32,8 @@ public class Programa {
         int aI = sc.nextInt();
         calendario.setAñoIncrementar(aI);
 
+        calendario.incrementarAño();
+
         //Vemos si se ha modificado
         calendario.mostrar();
     }

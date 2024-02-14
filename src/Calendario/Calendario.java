@@ -76,7 +76,23 @@ public class Calendario {
 
     }
     public void incrementarAño() { // No cojemos años bisiestos
-        año = año + añoIncrementar;
+
+        if (año != 0) {
+            int añoNuevo = año + añoIncrementar;
+
+            if (año < 0 && añoNuevo == 0) {
+                añoNuevo = 1;
+                año = añoNuevo;
+            } else if (año < 0 && añoNuevo > 0) {
+                añoNuevo += 1;
+                año = añoNuevo;
+            } else {
+                // Manejar el caso si año >= 0
+                año = añoNuevo;
+            }
+        } else {
+            System.out.println("No existe el año 0.");
+        }
     }
 
 
@@ -86,5 +102,4 @@ public class Calendario {
     }
 
     }
-//----------------------------------------------------
-//1. Año no puede ser 0.
+
